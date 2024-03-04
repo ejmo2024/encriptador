@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+   
+}
+html{
+    height: 100%;
+  }
+  body{
+    background-color:#F3F5FC; 
+   max-height:100vh;
+  }
+  header{
+    display: flex;
+  }
+  .header{
+    width: 90%;
+   padding-top: 1px;
+  }
+  .principal{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 90%;
+    height: 480px;
+    margin: 5px auto;
+    max-width: 1300px;
+  /* min-height: calc(100vh - 91px - 72px);*/
+    background-color:#F3F5FC;
+    box-sizing: border-box;
+     gap: 10px;
+    
+  }
+  .izquierda{
+      height: 94%;
+      width: 100%;
+     
+    }
+    .textarea{
+        width: 80%;
+        height: 80%; 
+        resize: none;/*para que no se pueda ampliar el textarea con el mouse */
+        display: block;
+        margin: auto;/* centra el textarea*/
+        margin-top: 20px;/* separa del haeder */
+        border-radius: 20px;
+        outline: 0;/*quita la linea del borde */
+        font-family: Inter;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 48px;
+        letter-spacing: 0em;
+        text-align: left;
+        background-color:#F3F5FC;
+        color:#0a3871;
+        cursor: pointer;
+      }
+      .textarea.textarea::placeholder{
+        color:#0A3871;
+        font-family: Inter;
+        }
+    .botones{
+     display: flex;     
+    gap: 24px;
+    justify-content: center;;
+     padding-top: 10px;/*aleja de esclamacion*/    
+     } 
+     .btn_encriptar{
+        max-width: 328px;/*tamaño maximo*/
+        width: 40%;/*responsi*/
+        height: 67px;
+        border-radius: 24px;
+        background-color: #0a3871;
+        color:white ;
+        font-family: Inter;
+        font-size: 16px;
+           cursor: pointer;
+        }
+        .btn_encriptar:hover{
+         border: 2px solid white;     
+        }
+        .btn_desencriptar{
+            max-width: 328px;/*tamaño maximo*/
+            width: 40%;/*responsi*/
+            height: 67px;
+            border-radius: 24px;
+             background-color: white;
+            color:#0a3871 ;
+            font-size: 16px;
+            font-family: Inter;
+            border: 1px solid #0a3871;
+             cursor: pointer;
+          }
+          .btn_desencriptar:hover{
+            border: 2px solid #0a3871;     
+           }
+          .derecha{
+              height: 94%;
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              border-radius: 20px;
+              background-color: white;
+              overflow-y: auto; /* Agrega una barra de desplazamiento vertical si es necesario */
+             /* overflow-x: hidden; *//* Oculta la barra de desplazamiento horizontal */
+              /*max-height: 200px; */
+            } 
+            .p_respuesta{
+                font-size: 24px;
+                font-family: Inter;
+                font-weight: 400;
+                line-height: 48px;
+                letter-spacing: 0em;
+                text-align: justify;
+                margin-left: 20px;/* separa el texto del borde*/
+                margin-right: 10px;/* separa el texto del borde*/;
+                word-wrap: break-word; /* Para permitir que el texto se divida automáticamente en palabras */
+                overflow-wrap: break-word; /* Fallback para navegadores más antiguos */
+                color: #0A3871;
+                 overflow-y: auto; 
+                max-height: 300px; 
+              }
+              .img_muñeco{
+                max-width: 100%; /* El muñeco nunca excederá el ancho del contenedor Grid */
+                height: auto;/* La altura se ajustará automáticamente para mantener la relación de aspecto */
+                display: block; /* Esto es importante para asegurarse de que la imagen se comporte correctamente */
+                margin: 0px auto; 
+              }
+              .p_mensaje{
+                font-weight: bold;
+                font-size: 16px;
+                font-family: Inter;
+                text-align: center;
+              }
+              .p_ingrese_texto{
+                font-size: 16px;
+                font-family: Inter;
+                font-weight: 400;
+                text-align: center;
+               }
+               .copiar{
+                display: flex;
+                justify-content: center;
+                padding-bottom: 10px;
+                
+              }
+              
+              .btn_copiar{
+                max-width: 328px;/*tamaño maximo*/
+                width: 80%;/*responsi*/
+                height: 67px;
+                border-radius: 24px;
+                background-color:white;
+                border: 1px solid #0a3871;
+                color:#0a3871 ;
+                font-size: 16px;
+                font-family: Inter;
+                font-weight: 400;
+                 cursor: pointer;
+              }
+              .btn_copiar:hover{
+                border: 2px solid #0a3871;     
+               }  
+              footer{
+                background-color:#F3F5FC; 
+                width: 90%;
+                margin: 0 auto;
+                height: 15px;
+                font-family: Inter;
+                font-weight: 400;
+                font-size: 10px;
+                color:#0a3871 ;
+                text-align: center;
+              }  
+
+              /* ///////////////medidas tablet/////////////////////*/
+              @media screen and (max-width: 768px) {
+                .principal {
+                  grid-template-columns: 1fr;
+                  margin: 0 auto;
+                  /*height: 100hv;*/
+                  height: 100hv;
+                }
+                .izquierda {
+                  
+                  width: 100%;
+                }
+                .textarea {
+                  width: 95%;
+                  /* height: auto;*/
+                  font-size: 22px;
+                  line-height: 32px;
+                  margin-top: 1px;
+                  /* separa del haeder */
+                  padding-left: 5px;
+                  padding-top: 2px;
+                
+                }
+                .textarea.textarea::placeholder {
+                  font-size: 24px;
+                }
+                .derecha {
+                    margin-top: 75px;
+                    height: auto;
+                  }
+                
+                .p_respuesta {
+                  font-size: 22px;
+                   font-weight: 400;
+                  line-height: 32px;
+                  letter-spacing: 0em;
+                  text-align: justify;
+                  padding: 5px;
+                  color: #0A3871;
+                }        
+                .img_muñeco {
+                  display: none;   
+                }
+                .p_mensaje {
+                  margin-top: 20px;
+                  margin-bottom: 5px;
+                }
+                .copiar {
+                 
+                  display: flex;
+                  justify-content: center;
+                  padding-bottom: 10px;
+                  margin-top: 10px;
+                }
+                footer {
+                 margin-top: 20px;
+                }
+              }
+              
+              /* ///////////////medidas dispositivos pequeños/////////////////////*/
+              @media only screen and (max-width: 368px) {
+              
+                .header {
+                  background-color: white;
+                 
+                }
+            
+                .principal {
+                  margin: 1px auto;
+                  /* min-height: calc(100vh - 91px - 72px);*/
+                  background-color: #F3F5FC;
+                  box-sizing: border-box;
+                  gap: 20px;
+                }
+              
+                .btn_encriptar {
+                 
+                  width: 70%;
+                  height: 60px;
+                  font-size: 14px;
+                  cursor: pointer;
+                }
+              
+              
+                .btn_desencriptar {
+                  max-width: 328px;
+                  /*tamaño maximo*/
+                  width: 70%;
+                  /*responsi*/
+                  height: 60px;
+                  font-size: 14px;
+              
+                }
+              
+                .img_muñeco {
+              
+                  display: none;
+                }
+              
+                .botones {
+                  display: flex;
+                  gap: 2px;
+                  /* justify-content: center;*/
+                  align-items: center;
+                  /*margin: 0 auto;*/
+                  /*  padding-top: 10px;*/
+                  /*aleja de esclamacion*/
+                  flex-direction: column;
+              
+                }
+                .izquierda {
+                  height: 90%;
+                }
+                .textarea {
+                  width: 80%;
+                  height: 60%;
+              
+                  resize: none;
+                  /*para que no se pueda ampliar el textarea con el mouse */
+                  display: block;
+                  margin: auto;
+                  /* centra el textarea*/
+                  margin-top: 20px;
+                  /* separa del haeder */
+                  border-radius: 20px;
+                  /*border: 1px solid;*/
+                  /*pon la linea del borde */
+                  outline: 0;
+                  /*quita la linea del borde */
+                  font-family: Inter;
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 28px;
+                  letter-spacing: 0em;
+                  text-align: left;
+                  background-color: #F3F5FC;
+                  color: #0a3871;
+                  cursor: pointer;
+                }
+              
+                .textarea.textarea::placeholder {
+                  font-size: 20px;
+              
+                }
+              
+                .derecha {
+                  margin-top: 60px;
+                  margin-bottom: 5px;
+                  height: 90%;
+                }
+              
+                
+              
+                .p_respuesta {
+                  margin-top: 5px;
+                  font-size: 14px;
+                  line-height: 20px;
+                  margin: 0 auto;
+                  padding: 8px;
+                  overflow-y: auto;
+              
+                }
+                .btn_copiar {
+                    max-width: 328px;
+                    /*tamaño maximo*/
+                    width: 60%;
+                    /*responsi*/
+                    height: 60px;
+                  }
+              
+                footer {
+                  
+                  width: 90%;
+                  margin-top: 40px;
+                  height: 15px;
+                 
+                }
+              }
